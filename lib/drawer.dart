@@ -80,9 +80,9 @@ class _HiddenDrawerState extends State<HiddenDrawer>
     scaleAnimation =
         Tween<double>(begin: 1.0, end: 0.86).animate(animationController);
     radiusAnimation = BorderRadiusTween(
-        begin: BorderRadius.circular(0.0), end: BorderRadius.circular(32))
+            begin: BorderRadius.circular(0.0), end: BorderRadius.circular(32))
         .animate(
-        CurvedAnimation(parent: animationController, curve: Curves.ease));
+            CurvedAnimation(parent: animationController, curve: Curves.ease));
   }
 
   @override
@@ -206,7 +206,7 @@ class _HiddenDrawerState extends State<HiddenDrawer>
                               padding: EdgeInsets.symmetric(vertical: 32),
                               child: ClipRRect(
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(44)),
+                                    BorderRadius.all(Radius.circular(44)),
                                 child: Container(
                                   color: Colors.white.withAlpha(128),
                                 ),

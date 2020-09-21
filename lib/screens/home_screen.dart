@@ -2,53 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:signup/drawer.dart';
 import 'package:signup/pages/Dashboard.dart';
-
-class MainPage extends DrawerContent {
-  MainPage({Key key, this.title});
-  final String title;
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                  child: Material(
-                    shadowColor: Colors.transparent,
-                    color: Colors.transparent,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.black,
-                      ),
-                      onPressed: widget.onMenuPressed,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(widget.title),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+import 'package:signup/widget/super_drawer_maker.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -65,15 +19,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _drawerController = HiddenDrawerController(
-      initialPage: MainPage(
-        title: 'main',
+      initialPage: SuperDrawer(
+        body: Center(
+          child: Text('home'),
+        ),
       ),
       items: [
         DrawerItem(
           text: Text('Home', style: TextStyle(color: Colors.white)),
           icon: Icon(Icons.home, color: Colors.white),
-          page: MainPage(
-            title: 'Home',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('home'),
+            ),
           ),
         ),
         DrawerItem(
@@ -82,22 +40,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.photo_album, color: Colors.white),
-          page: MainPage(
-            title: 'Gallery',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('gallery'),
+            ),
           ),
         ),
         DrawerItem(
-          onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => Dashboard()));
-          },
           text: Text(
             'Favorites',
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.favorite, color: Colors.white),
-          page: MainPage(
-            title: 'Favorites',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('fav'),
+            ),
           ),
         ),
         DrawerItem(
@@ -106,8 +64,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.notifications, color: Colors.white),
-          page: MainPage(
-            title: 'Notification',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('notification'),
+            ),
           ),
         ),
         DrawerItem(
@@ -116,8 +76,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.insert_invitation, color: Colors.white),
-          page: MainPage(
-            title: 'invite',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('invite'),
+            ),
           ),
         ),
         DrawerItem(
@@ -126,8 +88,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.settings, color: Colors.white),
-          page: MainPage(
-            title: 'SETTINGS',
+          page: SuperDrawer(
+            body: Center(
+              child: Text('settings'),
+            ),
           ),
         ),
       ],
