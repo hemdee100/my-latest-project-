@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "669853943660",
+    "firebase_url": "https://signup-aa8ce.firebaseio.com",
+    "project_id": "signup-aa8ce",
+    "storage_bucket": "signup-aa8ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669853943660:android:5cf77a584028dd5e439549",
+        "android_client_info": {
+          "package_name": "com.hemdee.signup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669853943660-inlr1ngusrdb9a2qap8f2a0ct8lbdfnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiM9FMW94nZjzAkw9Xi2bai18-r6vVtF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669853943660-inlr1ngusrdb9a2qap8f2a0ct8lbdfnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
